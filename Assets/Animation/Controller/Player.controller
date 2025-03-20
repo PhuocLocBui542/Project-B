@@ -124,10 +124,10 @@ AnimatorStateMachine:
     m_Position: {x: 390, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1325631865606791029}
-    m_Position: {x: 390, y: 140, z: 0}
+    m_Position: {x: 390, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3888026759741119543}
-    m_Position: {x: 390, y: 220, z: 0}
+    m_Position: {x: 390, y: 0, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions:
@@ -149,13 +149,13 @@ AnimatorController:
   m_Name: Player
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Jump
+  - m_Name: Idle
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Idle
+  - m_Name: Jump
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0

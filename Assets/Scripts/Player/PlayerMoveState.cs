@@ -21,6 +21,12 @@ public class PlayerMoveState : PlayerGroundState
     {
         base.Update();
 
+        if (!player.IsGroundDetected())
+        {
+            stateMachine.ChangeState(player.airState);
+            return;
+        }
+
         player.SetVelocity(xInput * player.moveSpeed, rb.velocity.y);
 
         if (xInput == 0)
