@@ -6,6 +6,7 @@ public class EnemyState
 {
     protected EnemyStateMachine stateMachine;
     protected Enemy enemy;
+    protected Rigidbody2D rb;
 
     private string animBoolName;
 
@@ -27,6 +28,7 @@ public class EnemyState
     public virtual void Enter()
     {
         triggerCalled = false;
+        rb = enemy.rb;
         enemy.anim.SetBool(animBoolName, true);
 
     }
