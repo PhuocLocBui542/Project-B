@@ -27,14 +27,12 @@ public class E1BattelState : EnemyState
     {
         base.Update();
 
-        if (e1.IsPlayerDetected())
+        if (e1.IsPlayerDetected() && e1.IsPlayerDetected().distance < e1.atkDistance)
         {
-            if (e1.IsPlayerDetected().distance < e1.atkDistance)
-            {
-                Debug.Log("check");
-                e1.ZeroVelocity();
-                return;
-            }
+            if (CanAttack())
+                stateMachine.ChangeState(e1.attackState);
+
+            return;
         }
 
         if (p.position.x > e1.transform.position.x)
@@ -43,5 +41,16 @@ public class E1BattelState : EnemyState
             moveDir = -1;
 
         e1.SetVelocity(e1.moveSpeed * moveDir, rb.velocity.y);
+    }
+
+    private bool CanAttack()
+    {
+        if(Time.time >= e1.lasttimeAtk + e1.atkCD)
+        {
+            e1.lasttimeAtk = Time.time;
+            return true;
+        }
+
+        return false;
     }
 }
