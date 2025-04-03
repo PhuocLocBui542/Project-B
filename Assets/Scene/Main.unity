@@ -404,7 +404,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -1560469539, guid: 6c9304d66654b684aae453e47c10d959, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -425,7 +425,7 @@ Transform:
   m_GameObject: {fileID: 1115378804}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.72, y: -2.33, z: 0}
+  m_LocalPosition: {x: -6.45, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1563,7 +1563,7 @@ Transform:
   m_GameObject: {fileID: 1983843848}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.714, y: -3.281, z: 0}
+  m_LocalPosition: {x: 1.62, y: -3.281, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1687,7 +1687,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   moveSpeed: 2
-  idleTime: 0
+  idleTime: 2
+  battleTime: 7
   atkDistance: 1.3
   atkCD: 0.4
   lasttimeAtk: 0
