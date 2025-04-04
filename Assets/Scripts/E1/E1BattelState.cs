@@ -34,8 +34,9 @@ public class E1BattelState : EnemyState
             stateTimer = e1.battleTime;
 
             if (CanAttack())
+            {
                 stateMachine.ChangeState(e1.attackState);
-
+            }
             return;
         }
         else
@@ -51,7 +52,7 @@ public class E1BattelState : EnemyState
 
     private bool CanAttack()
     {
-        if(Time.time >= e1.lasttimeAtk + e1.atkCD)
+        if (Time.time >= e1.lasttimeAtk + e1.atkCD)
         {
             e1.lasttimeAtk = Time.time;
             return true;
